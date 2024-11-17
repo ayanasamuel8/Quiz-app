@@ -1,0 +1,254 @@
+/* Default Theme Variables (Light Theme) */
+:root {
+  --background-color: #fefefe; /* Light theme background color */
+  --text-color: #070606; /* Light theme text color */
+  --secondary-background: #c1c9d6; /* Light theme secondary background color */
+  --secondary-hover: #8cbce4; /* Light theme hover color */
+  --primary-color: #5e68e6; /* Light theme primary color */
+  --correct-color: #4caf50; /* Color for correct answers */
+  --wrong-color: #f44336; /* Color for wrong answers */
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+  --background-color: #353a40; /* Dark theme background color */
+  --text-color: #feffff; /* Dark theme text color */
+  --secondary-background: #201f1f; /* Dark theme secondary background color */
+  --secondary-hover: #404040; /* Dark theme hover color */
+  --accent-color: #91a5a7; /* Dark theme accent color */
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Font family for the body */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--background-color),
+    var(--secondary-background)
+  ); /* Gradient background */
+  color: var(--text-color); /* Text color */
+  margin: 0; /* Remove default margin */
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: var(--accent-color);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Shadow for the scoreboard */
+}
+
+#scoreboard span,
+#scoreboard button {
+  font-size: 16px;
+  font-weight: bold; /* Bold text for scoreboard elements */
+}
+
+#score-tracker,
+#rating-label {
+  margin-right: 10px; /* Margin for score tracker and rating label */
+}
+
+#reset-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth background transition */
+}
+
+#reset-button:hover {
+  background: var(--secondary-hover); /* Change background on hover */
+}
+
+#quiz-container {
+  background: var(--secondary-background);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for the quiz container */
+  width: 80%;
+  max-width: 600px;
+  text-align: center; /* Center the text */
+}
+
+#question-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#question {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--text-color); /* Question text color */
+}
+
+#hint-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth background transition */
+}
+
+#hint-button:hover {
+  background: var(--secondary-hover); /* Change background on hover */
+}
+
+#hint-container {
+  background: var(--accent-color);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--text-color); /* Hint text color */
+  margin-bottom: 20px;
+  font-size: 16px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Shadow for hint container */
+  display: none; /* Initially hidden */
+}
+
+.answer {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background: var(--primary-color);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s; /* Smooth background and border transition */
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  color: white; /* Text color for answers */
+}
+
+.answer:hover {
+  background: var(--secondary-hover); /* Change background on hover */
+}
+
+.answer.correct {
+  background: var(--correct-color); /* Background color for correct answers */
+  color: white; /* Text color for correct answers */
+}
+
+.answer.wrong {
+  background: var(--wrong-color); /* Background color for wrong answers */
+  color: white; /* Text color for wrong answers */
+}
+
+#next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth background transition */
+}
+
+#next-button:hover {
+  background: var (--secondary-hover); /* Change background on hover */
+}
+
+.hidden {
+  display: none; /* Utility class to hide elements */
+}
+
+#category-selection h2 {
+  margin-bottom: 20px;
+}
+
+.category {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth background transition */
+}
+
+.category:hover {
+  background: var(--secondary-hover); /* Change background on hover */
+}
+
+#back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth background transition */
+}
+
+#back-button:hover {
+  background: var(--secondary-hover); /* Change background on hover */
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0; /* Hide the checkbox */
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px; /* Rounded corners for the slider */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%; /* Rounded corners for the slider handle */
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color); /* Change background when checked */
+}
+
+input:checked + .slider:before {
+  transform: translateX(
+    26px
+  ); /* Move slider handle to the right when checked */
+}
