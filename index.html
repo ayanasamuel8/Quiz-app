@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Theme Toggle Switch -->
+    <div id="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" onclick="toggleTheme()" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Scoreboard Section -->
+    <div id="scoreboard">
+      <span id="score-tracker">Score: 0</span>
+      <!-- Displays current score -->
+      <button id="reset-button">Reset</button>
+      <!-- Button to reset the score -->
+      <span id="rating-label">Rating: 0%</span>
+      <!-- Displays current rating -->
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container">
+      <!-- Category Selection Section -->
+      <div id="category-selection">
+        <h2>Select a Category</h2>
+        <button class="category" onclick="selectCategory('geography')">
+          Geography
+        </button>
+        <button class="category" onclick="selectCategory('literature')">
+          Literature
+        </button>
+        <button class="category" onclick="selectCategory('science')">
+          Science
+        </button>
+        <button class="category" onclick="selectCategory('history')">
+          History
+        </button>
+        <button class="category" onclick="selectCategory('movies')">
+          Movies
+        </button>
+      </div>
+
+      <!-- Quiz Content Section -->
+      <div id="quiz-content" class="hidden">
+        <!-- Question and Hint Container -->
+        <div id="question-container">
+          <div id="question"></div>
+          <!-- Displays the current question -->
+          <button id="hint-button" onclick="showHint()">Show Hint 💡</button>
+          <!-- Button to show hint -->
+        </div>
+
+        <!-- Hint Display Container -->
+        <div id="hint-container" class="hidden"></div>
+        <!-- Initially hidden, shows hint when button is clicked -->
+
+        <!-- Answers Container -->
+        <div id="answers"></div>
+        <!-- Displays the answer options -->
+
+        <!-- Navigation Buttons -->
+        <button id="next-button">Next</button>
+        <!-- Button to move to the next question -->
+        <button id="back-button" class="hidden">Back to Categories</button>
+        <!-- Button to go back to category selection -->
+      </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>
