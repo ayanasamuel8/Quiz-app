@@ -21,3 +21,4 @@ The **Quiz App** is a simple, interactive application designed to test your know
 ![](demo_images/Screenshot%20from%202024-11-17%2006-41-08.png)
 ![](demo_images/Screenshot%20from%202024-11-17%2006-41-18.png)
 ![](demo_images/Screenshot%20from%202024-11-17%2006-41-24.png)
+![](demo_images/Screenshot%20from%202024-11-17%2006-41-35.png)
